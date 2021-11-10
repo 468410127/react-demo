@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "types": ["node", "webpack-env"],
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "paths": {
+      "@/*": ["src/*"],
+      "@pkg/*":["pkg/*"],
+      "@react-better/*":["pkg/react-better/*"],
+      "@pro/*":["pkg/pro/*"],
+      "antd-oo":["pkg/antd-oo"],
+      "antd-oo/*":["pkg/antd-oo/*"]
+    },
+    "outDir": "./dist" // 输出目录
+  },
+  "include": ["src/**/*", "pkg/**/*"]
+}
+
+

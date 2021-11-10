@@ -1,0 +1,86 @@
+/** loading动画 */
+@borderColor: #333;
+
+.container {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+}
+
+.loader {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.three {
+  width: 100px;
+  height: 100px;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid transparent 10px;
+  border-top: solid @borderColor 10px;
+  border-left: solid @borderColor 10px;
+  border-radius: 50%;
+  animation: loader3Animation 2s linear infinite;
+}
+
+.three::before {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  content: "";
+  border: solid transparent 10px;
+  border-top: solid @borderColor 10px;
+  border-left: solid @borderColor 10px;
+  border-radius: 50%;
+  animation: loader3AnimationBefore 1.5s linear infinite;
+}
+
+.three::after {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 70px;
+  height: 70px;
+  content: "";
+  border: solid transparent 10px;
+  border-top: solid @borderColor 10px;
+  border-left: solid @borderColor 10px;
+  border-radius: 50%;
+  animation: loader3AnimationAfter 1.5s linear infinite;
+}
+
+@keyframes loader3Animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader3AnimationBefore {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader3AnimationAfter {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
